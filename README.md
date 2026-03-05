@@ -44,4 +44,4 @@ Daily out-of-stock events are aggregated into SKU-level revenue exposure estimat
 
 The model organizes revenue impact by month and sales channel. This allows leadership to quantify potential lost sales attributable to stockouts.
 
-![Revenue Exposure Model](docs/images/revenue_model_structure.png)
+![Revenue Exposure Model](revenue_model_structure.png)

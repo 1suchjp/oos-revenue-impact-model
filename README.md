@@ -32,3 +32,16 @@ Aggregation Layer (QUERY based data normalization)
 MoM Revenue Impact Model
 ```
 
+## Stockout Detection Log
+
+The Apps Script runs daily and records any SKU with zero available inventory across all sales channels.
+
+![Stockout Detection Log](oos%20detection%20log.png)
+
+## Revenue Exposure Model
+
+Daily out-of-stock events are aggregated into SKU-level revenue exposure estimates across sales channels.
+
+The model organizes revenue impact by month and sales channel. This allows leadership to quantify potential lost sales attributable to stockouts.
+
+![Revenue Exposure Model](docs/images/revenue_model_structure.png)

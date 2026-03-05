@@ -1,9 +1,10 @@
 # oos-revenue-impact-model
+
+**Operational analytics model that detects product stockouts and estimates potential revenue exposure across DTC and B2B e-commerce channels.**
+
 An end-to-end analytics pipeline that detects SKU stockouts and estimates
 potential revenue exposure across multiple e-commerce channels using
 Shopify data, Google Sheets, and Apps Script automation.
-
-Month-over-Month Stockout Revenue Impact Model
 
 ## Overview
 

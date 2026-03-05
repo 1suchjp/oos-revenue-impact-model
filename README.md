@@ -45,3 +45,9 @@ Daily out-of-stock events are aggregated into SKU-level revenue exposure estimat
 The model organizes revenue impact by month and sales channel. This allows leadership to quantify potential lost sales attributable to stockouts.
 
 ![Revenue Exposure Model](revenue_model_structure.png)
+
+## Key Design Decisions
+
+- Historical sales data was excluded due to volatility in the hemp-derived THC / CBD market segment.
+- Daily inventory snapshots are used to detect stockout events across channels.
+- Stockout events are aggregated into monthly SKU-level exposure estimates.

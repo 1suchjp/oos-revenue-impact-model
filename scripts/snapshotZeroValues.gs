@@ -1,3 +1,13 @@
+/**
+ * snapshotzerovalues
+ *
+ * This script scans all Shopify inventory dashboards and records any SKU
+ * with zero available inventory. Results are added to a log sheet
+ * used for downstream stockout analysis and revenue exposure modeling.
+ *
+ * Cadence: Runs once daily via Apps Script trigger.
+ */
+
 function snapshotzerovalues() {
   const ss = SpreadsheetApp.getActiveSpreadsheet();
 

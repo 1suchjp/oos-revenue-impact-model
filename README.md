@@ -1,9 +1,11 @@
 # oos-revenue-impact-model
-An end-to-end pipeline analyzing SKU stockouts and estimating theoretical revenue impact using Shopify API, Node.js integration, Google Apps Script automation, and forecast models.
+An end-to-end analytics pipeline that detects SKU stockouts and estimates
+potential revenue exposure across multiple e-commerce channels using
+Shopify data, Google Sheets, and Apps Script automation.
 
 Month-over-Month Stockout Revenue Impact Model
 
-**Overview**
+## Overview
 
 This project models the theoretical revenue impact of product stockouts across multiple brands and sales channels. 
 
@@ -15,9 +17,13 @@ The resulting system transforms inventory events into clear financial metrics an
 
 **NOTE** - The model assumes demand is evenly distributed across days within a month. Though it does not capture short-term demand variability, it provides a consistent framework for estimating relative revenue exposure across SKUs, channels, and time periods.
 
+## Objective
+
+The model estimates potential revenue exposure created when SKUs become temporarily unavailable for sale due to stockouts.
+
 ## System Architecture
 ```
-Shopify
+Shopify (inventory source)
 ↓
 Railway (Node.js automation layer)
 ↓
@@ -51,3 +57,11 @@ The model organizes revenue impact by month and sales channel. This allows leade
 - Historical sales data was excluded due to volatility in the hemp-derived THC / CBD market segment.
 - Daily inventory snapshots are used to detect stockout events across channels.
 - Stockout events are aggregated into monthly SKU-level exposure estimates.
+
+## Repository Structure
+
+/scripts
+  snapshotZeroValues.gs        – Apps Script used for daily stockout detection
+
+/docs
+  data_dictionary.md           – dataset documentation

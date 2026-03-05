@@ -1,16 +1,14 @@
 # oos-revenue-impact-model
 
-**Operational analytics model that detects product stockouts and estimates potential revenue exposure across DTC and B2B e-commerce channels.**
+**An end-to-end perational analytics model that detects product stockouts and estimates potential revenue exposure across DTC and B2B e-commerce channels.**
 
-An end-to-end analytics pipeline that detects SKU stockouts and estimates
-potential revenue exposure across multiple e-commerce channels using
-Shopify data, Google Sheets, and Apps Script automation.
+Tech: Shopify | Google Sheets | Apps Script | Node.js | Matrixify
 
 ## Overview
 
 This project models the theoretical revenue impact of product stockouts across multiple brands and sales channels. 
 
-The goal was: quantify how much revenue may have been lost when SKUs became unavailable for sale on the website and present that impact withinin a month-over-month (MoM) analytical framework.
+The goal : quantify how much revenue may have been lost when SKUs became unavailable for sale on the website and present that impact withinin a month-over-month (MoM) analytical framework.
 
 The model uses forecasted demand and stock availability to estimate the financial exposure associated with inventory stockouts. Historical sales data was not used due to volatility in the Hemp derived THC and consumer CBD market segment (ie., unreliable proxy for future demand).
 

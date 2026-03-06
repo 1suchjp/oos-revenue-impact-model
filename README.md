@@ -1,6 +1,6 @@
 # oos-revenue-impact-model
 
-**An end-to-end perational analytics model that detects product stockouts and estimates potential revenue exposure across DTC and B2B e-commerce channels.**
+**An end-to-end operational analytics model that detects product stockouts and estimates potential revenue exposure across DTC and B2B e-commerce channels.**
 
 Tech: Shopify | Google Sheets | Apps Script | Node.js | Matrixify
 

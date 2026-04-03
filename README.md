@@ -1,26 +1,22 @@
 # oos-revenue-impact-model
 
-**An end-to-end operational analytics model that detects product stockouts and estimates potential revenue exposure across DTC and B2B e-commerce channels.**
+**Detects product stockouts and estimates potential revenue exposure across DTC and B2B e-commerce channels.**
 
-Tech: Shopify | Google Sheets | Apps Script | Node.js | Matrixify
+Tech stack - Shopify, Google Sheets, Apps Script, Node.js, Matrixify
 
 ## Overview
 
 This project models the theoretical revenue impact of product stockouts. It spans multiple brands and sales channels. 
 
-The goal: quantify how much revenue may have been lost when SKUs became unavailable for sale on company website, and present that impact within a month-over-month (MoM) analytical framework.
+The goal was to quantify how much revenue may have been lost when SKUs became unavailable for sale on company website, then frame it visually in a month over month framework.
 
-The model uses forecasted demand and stock availability to estimate the financial exposure associated with inventory stockouts. Historical sales data was not used due to volatility in the Hemp derived THC and consumer CBD market segment (unreliable proxy for future demand).
+The model uses forecasted demand and stock availability to estimate the financial exposure associated with inventory stockouts. Historical sales data was not used as a demand proxy (ie., hemp-derived THC / consumer CBD market is too volatile for past sales to reliably predict future demand). This model instead works from forecasted demand and actual stock availability events.
 
-The resulting system transforms inventory events into clear financial metrics and allows for stockout severity to be evaluated in terms executives can immediately understand: **potential lost revenue**.
+The resulting output is presented in such a way that C suite executives can quickly understand a glance how much revenue was left on the table.
 
 **NOTE** - The model assumes demand is evenly distributed across all days in a month.
 
-## Objective
-
-The model estimates potential revenue exposure created when SKUs become temporarily unavailable for sale due to stockouts.
-
-## System Architecture
+## How it works
 ```
 Shopify (inventory source)
 ↓
@@ -39,7 +35,7 @@ MoM Revenue Impact Model
 
 ## Stockout Detection Log
 
-Google Apps Script runs daily during peak sale activity, recording any SKU with zero available inventory across all sales channels. These are stockout "events".
+Apps Script runs once daily during peak sales activity. Any SKU sitting at zero available inventory gets logged as a stockout event and is timestamped.
 
 ![Stockout Detection Log](oos%20detection%20log.png)
 
@@ -53,14 +49,14 @@ The model organizes revenue impact by month and sales channel.
 
 ## Key Design Decisions
 
-- Historical sales data was excluded due to volatility in the hemp-derived THC / CBD market segment.
-- Daily inventory snapshots are used to detect stockout events across channels.
-- Stockout events are aggregated into monthly SKU-level exposure estimates.
+- As previously stated, historical sales data was excluded due to volatility in the hemp-derived THC / CBD market
+- Due to systems limitaions, daily inventory snapshots are captured once daily during peak sales activity
+- The model assumes demand spreads uniformly across all days in a month
 
 ## Repository Structure
 
 /scripts
-  snapshotZeroValues.gs        – Apps Script used for daily stockout detection
+  snapshotZeroValues.gs        – daily stockout detection (Apps Script)
 
 /docs
   data_dictionary.md           – dataset documentation

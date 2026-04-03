@@ -53,7 +53,7 @@ The model organizes revenue impact by month and sales channel.
 - Due to systems limitaions, daily inventory snapshots are captured once daily during peak sales activity
 - The model assumes demand spreads uniformly across all days in a month
 
-## Repository Structure
+## Repo Structure
 
 /scripts
   snapshotZeroValues.gs        – daily stockout detection (Apps Script)
